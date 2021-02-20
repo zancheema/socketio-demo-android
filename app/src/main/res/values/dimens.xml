@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auth_profile_dimens">200dp</dimen>
+    <dimen name="auth_profile_corner_radius">100dp</dimen>
+    <dimen name="none">0dp</dimen>
+    <dimen name="message_padding_bottom">8dp</dimen>
+    <dimen name="message_padding_end">6dp</dimen>
+    <dimen name="message_padding_start">8dp</dimen>
+    <dimen name="message_padding_top">4dp</dimen>
+    <dimen name="message_radius">12dp</dimen>
+    <dimen name="message_margin_horizontal">6dp</dimen>
+    <dimen name="message_margin_vertical">4dp</dimen>
+    <dimen name="edit_message_radius">50dp</dimen>
+    <dimen name="edit_message_padding_vertical">8dp</dimen>
+    <dimen name="edit_message_stroke_width">1dp</dimen>
+    <dimen name="edit_message_padding_horizontal">16dp</dimen>
+    <dimen name="send_button_dimens">30dp</dimen>
+</resources>

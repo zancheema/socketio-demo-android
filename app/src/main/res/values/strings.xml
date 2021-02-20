@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SocketIo Test</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nickname">Nickname</string>
+    <string name="chat_room">Chat Room</string>
+    <string name="enter">Enter</string>
+    <string name="sample_message">Hello there!</string>
+    <string name="message">Message</string>
+</resources>
