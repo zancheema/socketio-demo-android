@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/sendMessageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,24 +23,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:textCursorDrawable="@color/accent_color_dark"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/edit_message_bg"
         android:ems="10"
         android:hint="@string/message"
         android:inputType="textPersonName"
         android:textColor="@color/accent_color_dark"
+        android:textCursorDrawable="@color/accent_color_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintEnd_toStartOf="@+id/sendMessageView"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/sendMessageView"
         android:layout_width="@dimen/send_button_dimens"
         android:layout_height="@dimen/send_button_dimens"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/writeChatMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/writeChatMessage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

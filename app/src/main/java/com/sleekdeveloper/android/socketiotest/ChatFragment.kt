@@ -41,6 +41,13 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
         mSocket.on(Socket.EVENT_CONNECT, onConnect)
         mSocket.on("newSubscriber", onNewSubscriber)
         mSocket.on("newUnsubscriber", onNewUnsubscriber)
+        mSocket.on("newMessage", onNewMessage)
+
+        sendMessageView.setOnClickListener {
+            val message = ChatMessage(userName, writeChatMessage.text.toString(), chatRoom)
+            mSocket.emit("sendMessage", gson.toJson(message))
+            writeChatMessage.text.clear()
+        }
     }
 
     private val onConnect = Emitter.Listener {
@@ -57,6 +64,11 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
     private val onNewUnsubscriber = Emitter.Listener {
         val name = it[0] as String
         addToChatMessages(ChatMessage(name, "$name left the chat room", chatRoom))
+    }
+
+    private val onNewMessage = Emitter.Listener {
+        val message = gson.fromJson(it[0] as String, ChatMessage::class.java)
+        addToChatMessages(message)
     }
 
     private fun addToChatMessages(chatMessage: ChatMessage) {
